@@ -1,0 +1,10 @@
+name: qa_table_2
+properties:
+  - name: qa_table_2_string
+    type: string
+  - name: qa_table_2_array
+    type: array
+  - name: qa_table_2_json
+    type: string
+  - name: qa_table_2_int
+    type: integer

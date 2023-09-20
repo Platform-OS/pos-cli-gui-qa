@@ -1,0 +1,4 @@
+name: qa_table_3
+properties:
+  - name: qa_table_3_string
+    type: string

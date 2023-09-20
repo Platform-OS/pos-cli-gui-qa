@@ -1,0 +1,7 @@
+{% liquid
+  assign my_data = null | hash_merge: hello: 'world'
+
+  background job = 'background_job/scheduled', delay: 10, source_name: 'scheduled background job', data: my_data
+
+  echo 'background job scheduled'
+%}
