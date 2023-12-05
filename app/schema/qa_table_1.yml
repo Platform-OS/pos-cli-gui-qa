@@ -8,3 +8,5 @@ properties:
     type: string
   - name: qa_table_1_int
     type: integer
+  - name: qa_table_1_boolean
+    type: boolean
