@@ -10,3 +10,5 @@ properties:
     type: integer
   - name: qa_table_1_boolean
     type: boolean
+  - name: qa_table_1_datetime
+    type: datetime
