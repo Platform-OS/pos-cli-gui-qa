@@ -1,5 +1,24 @@
+{% parse_json json %}
+  {
+    "lorem": "ipsum dolor sit amet",
+    "suspendisse libero": "eros, viverra eu dui eget, laoreet bibendum odio",
+    "array": ["item1", "item2", "item3"]
+  }
+{% endparse_json %}
+
+
 {% liquid
-  log 'This is a test log'
+
+  assign type = context.params.type | default: 'info'
+  assign message = context.params.message | default: 'This is a test log' | url_decode
+
+  if context.params.special == 'json'
+    assign message = json
+  endif
+
+
+  log message, type: type
 %}
+
 
 Registering a log
