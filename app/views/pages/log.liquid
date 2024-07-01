@@ -16,8 +16,16 @@
     assign message = json
   endif
 
+  if context.params.special == 'counter'
+    assign type = 'counter'
+    for i in (1..100)
+      log i, type: 'counter'
+    endfor
+  endif
 
-  log message, type: type
+  unless context.params.special == 'counter'
+    log message, type: type
+  endunless
 %}
 
 
